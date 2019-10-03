@@ -13,8 +13,9 @@ class EmailAddressParser
 	def parse
 		@csv_emails = @csv_emails.gsub(/[\s,]/ ," ").split
 		# @csv_emails is a instance variable,The gsub string method is a substitution method,It finds all instances of the matched string and replaces it with the new argument. /[\s] removes white space. 
+		
 		@csv_emails.flatten.uniq
-		#.uniq Returns a new array by removing duplicate values in self.
+		#.uniq Returns a new array by removing duplicate values in self. .flatten Returns a new array that is a one-dimensional flattening of self (recursively).That is, for every element that is an array, extract its elements into the new array.
 	end
 	
 end
