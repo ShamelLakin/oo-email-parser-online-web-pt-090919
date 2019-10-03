@@ -12,7 +12,7 @@ class EmailAddressParser
 	
 	def parse
 		@csv_emails = @csv_emails.gsub(/[\s,]/ ," ").split
-		#The gsub string method is a substitution method,It finds all instances of the matched string and replaces it with the new argument. /[\s] rmoves white space. 
+		#The gsub string method is a substitution method,It finds all instances of the matched string and replaces it with the new argument. /[\s] rmoves white space. .uniq r
 		@csv_emails.flatten.uniq
 	end
 	
